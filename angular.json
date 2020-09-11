@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tavisca-assignment"
+    }
+  },
+  "defaultProject": "tavisca-assignment",
+  "cli": {
+    "analytics": "8b11f691-b2d2-493d-9571-3f7ba4b64248"
+  }
 }
