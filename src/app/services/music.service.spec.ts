@@ -52,7 +52,7 @@ describe('MusicService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('getAllMusic: should return a book list', () => {
+  it('getAllMusic: should return a music list', () => {
     service.getAllMusic().subscribe(music => {
       expect(music.length).toBe(2);
       expect(music[0].category).toBe('English');
