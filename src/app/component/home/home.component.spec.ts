@@ -8,11 +8,10 @@ import { HomeComponent } from './home.component';
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
-  let nativeElement: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
+      declarations: [HomeComponent],
       schemas: [NO_ERRORS_SCHEMA],
       providers: [
         provideMockStore({
@@ -23,10 +22,10 @@ describe('HomeComponent', () => {
             }
           },
         }),
-        { provide: Store, useClass: MockStore}
+        { provide: Store, useClass: MockStore }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

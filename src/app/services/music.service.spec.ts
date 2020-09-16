@@ -9,24 +9,24 @@ import { environment } from 'src/environments/environment';
 const mockMusic = [
   {
     id: 1,
-    title: 'Percy Jackson',
+    title: 'Emptyness',
     category: 'English',
-    description: 'About to save camp half rode'
+    description: 'Gajendra Verma sound recordist from mumbai.'
   },
   {
     id: 2,
-    title: 'Mastering the Art of French Cooking',
-    category: 'Cookbooks',
-    description: 'It is for both seasoned cooks and beginners'
+    title: 'Swadesh',
+    category: 'Patriotic',
+    description: 'Hindi indian music by A.R. Rahman'
   }
 ];
 
-const music = {
+const musicObj = {
   id: 3,
-  title: "Emptyness",
-  category: "Englsh",
-  description: "sdbdjsdjf dfdk"
-}
+  title: 'Emptyness',
+  category: 'Englsh',
+  description: 'Gajendra Verma sound recordist from mumbai.'
+};
 
 describe('MusicService', () => {
 
@@ -52,12 +52,12 @@ describe('MusicService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('getAllMusic: should return a book list', () => {
+  it('getAllMusic: should return a music list', () => {
     service.getAllMusic().subscribe(music => {
       expect(music.length).toBe(2);
       expect(music[0].category).toBe('English');
     });
- 
+
     const mockReq = httpMock.expectOne(req => req.url.includes(`${environment.apiEndPoint}/musicList`));
     expect(mockReq.request.method).toEqual('GET');
     mockReq.flush(mockMusic);
@@ -71,7 +71,7 @@ describe('MusicService', () => {
     });
     const mockReq = httpMock.expectOne(req => req.url.includes(`${environment.apiEndPoint}/musicList`));
     expect(mockReq.request.method).toEqual('POST');
-    mockReq.flush(music);
+    mockReq.flush(musicObj);
     httpMock.verify();
   });
 
@@ -83,7 +83,7 @@ describe('MusicService', () => {
     });
     const mockReq = httpMock.expectOne(req => req.url.includes(`${environment.apiEndPoint}/musicList/${requestBody.id}`));
     expect(mockReq.request.method).toEqual('PUT');
-    mockReq.flush(music);
+    mockReq.flush(musicObj);
     httpMock.verify();
   });
 
@@ -95,7 +95,7 @@ describe('MusicService', () => {
     });
     const mockReq = httpMock.expectOne(req => req.url.includes(`${environment.apiEndPoint}/musicList/${requestBody.id}`));
     expect(mockReq.request.method).toEqual('DELETE');
-    mockReq.flush(music);
+    mockReq.flush(musicObj);
     httpMock.verify();
   });
 });

@@ -1,19 +1,32 @@
+:host {
+ // display: block;
+ // padding: 4px 12px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
 .header {
     background-color: #632ef5;
     padding: 1px 15px;
 
-   
+   span {
+     padding: 10px;
+   }
 
     .header-right {
         float: right;
         margin-top: -112px;
-        padding: 70px;
+        padding: 42px;
         display: flex;
 
       button {
         border: none;
         background-color: #632ef5;
         margin-right: 10px;
+      }
+
+      .theme-dark {
+        background-color: #170646;
       }
 
     .entry-btn {
@@ -41,7 +54,7 @@
     @media screen and (min-width: 280px) and (max-width: 750px)  {
       .header {
         height: 170px;
-        margin: 4px;   
+        margin: 4px; 
         
         .header-right {
           float: none;
@@ -49,5 +62,17 @@
           padding: 70px;
           display: flex;
         }
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      .header {
+         width: 763px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1200px) {
+      .header {
+         width: 974px;
       }
     }

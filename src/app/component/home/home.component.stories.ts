@@ -1,37 +1,47 @@
 import { StoreModule } from '@ngrx/store';
-//import { CardComponent } from './card.component';
-import { addDecorator, moduleMetadata, storiesOf } from '@storybook/angular';
+import { moduleMetadata, storiesOf } from '@storybook/angular';
+import { CardComponent } from '../card/card.component';
 import { HomeComponent } from './home.component';
-//import { TranslateTestingModule } from 'ngx-translate-testing';
 
 storiesOf('Home', module)
-.addDecorator(
-  moduleMetadata({
-      declarations: [HomeComponent],
+  .addDecorator(
+    moduleMetadata({
+      declarations: [HomeComponent, CardComponent],
       imports: [StoreModule.forRoot({})]
-  })
-)
+    })
+  )
   .add('empty', () => ({
     component: HomeComponent,
     props: {
-      storybookColor: 'tomato'
+      musicList: [{
+        title: '',
+        category: '',
+        description: ''
+      }]
     }
   }))
 
   .add('with title', () => ({
     component: HomeComponent,
     props: {
-      storybookColor: '#10ac84',
-      headerColor: '#006266',
-      musicList: [{title: 'The Testaments'}, {title: 'Emptyness'}, {title: 'I love my India'}],
+      musicList: [{ title: 'Ye jo desh hai mera' }, { title: 'Emptyness' }, { title: 'I love my India' }],
       loading$: false
     }
   }))
+
   .add('with title and category', () => ({
     component: HomeComponent,
     props: {
-      storybookColor: 'tomato',
-      headerColor: 'rgb(245, 69, 38)',
-      musicList: [{title: 'The Testaments', category: 'Science'}],
+      musicList: [
+        { title: 'Ye jo desh hai mera', category: 'Patriotic' },
+        { title: 'Emptyness', category: 'English' }
+      ]
+    }
+  }))
+
+  .add('with title, category & description', () => ({
+    component: HomeComponent,
+    props: {
+      musicList: [{ title: 'Ye jo desh hai mera', category: 'Patriotic', description: 'Hindi indian music by A.R. Rahman' }],
     }
   }));

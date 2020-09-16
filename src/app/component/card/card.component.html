@@ -1,0 +1,37 @@
+<div class="wrapper">
+    <div class="music-list">
+    <div *ngIf="music" class="list">
+        <h2 [ngStyle]="{'background-color': headerColor}">{{music.title}}</h2>
+
+    <div class="details" [ngStyle]="{'background-color': storybookColor}">
+        <img src="../../../assets/music-note.svg"/> 
+        <h3>{{music.category}}</h3>
+        <span>{{music.description}}</span>
+    </div>
+    </div>
+   </div>
+</div>
+
+
+<!--<div class="wrapper">
+    <div [class.loading]="loading" class="music-list" *ngIf="!error; else error">
+      <div class="list">
+        <h2>
+          {{music.title}}
+        </h2>
+
+        <div class="details">
+         <img src="../../../assets/music-note.svg"/> 
+         <span>{{music.category}}</span>
+         <span>{{music.description}}</span>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  
+  <ng-template #error>
+    <h2>{{error}}</h2>
+  </ng-template>
+  </div>-->

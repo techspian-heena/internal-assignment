@@ -1,0 +1,24 @@
+<h2 *ngIf="!id">Share Your Music</h2>
+<h2 *ngIf="id">Edit Music</h2>
+<div class="card">
+  <div class="container">
+    <div class="music-details">
+        <label>Music Name</label>
+        <input placeholder="Enter Music Name" type="text"  [(ngModel)]="title" name = "name">
+    </div>
+    <div class="music-details">
+        <label>Music Category</label>
+        <input placeholder="Enter Music Category" type="text" [(ngModel)]="category" name="category">
+    </div>
+    <div class="music-details">
+        <label>Music Description</label>
+        <textarea placeholder="Enter Your Music Description" [(ngModel)]="description" style="height:200px" name="description"></textarea>
+    </div>
+  </div>
+
+  <div class="page-footer border-top">
+    <button class="cancel" (click)="cancel()" [ngStyle]="{'color': btnclr}">Cancel</button>
+    <button *ngIf="!id" type="submit" class="save" (click)="onSave()" [ngStyle]="{'background-color': btnclr}">Save</button>
+    <button *ngIf="id" type="submit" class="save" (click)="edit()" [ngStyle]="{'background-color': btnclr}">Edit</button>
+  </div>
+</div>

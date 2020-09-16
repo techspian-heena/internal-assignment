@@ -1,10 +1,16 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterTestingModule } from '@angular/router/testing';
 import { storiesOf, moduleMetadata } from '@storybook/angular';
 import { HeaderComponent } from './header.component';
 
 storiesOf('Header', module)
     .addDecorator(
         moduleMetadata({
-            declarations: [HeaderComponent]
+            declarations: [HeaderComponent],
+            imports: [
+                RouterTestingModule,
+                BrowserModule
+            ]
         })
     )
     .add(

@@ -1,7 +1,7 @@
 <div class="header" [ngStyle]="{'background-color': storybookClr}">
-    <h2>   <img src="../../../assets/headphones.svg"/> Music Share</h2>
+    <h2>  <img src="../../../assets/song.svg"/> <span>Music Share</span></h2>
     <div class="header-right">
-            <button [ngStyle]="{'background-color': storybookClr}"><img src="../../../assets/moon.svg"/></button>
+            <button (click)="changeTheme()" [ngClass]="{'theme-dark': isDark}" [ngStyle]="{'background-color': storybookClr}"><img src="../../../assets/moon.svg"/></button>
             
         <div class="entry-btn">
             <button [ngStyle]="{'background-color': buttonClr}" class="login" (click)="logIn()">Login</button>

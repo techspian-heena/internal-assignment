@@ -1,0 +1,68 @@
+:host {
+  display: block;
+  border-radius: 2px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.wrapper {
+    text-align: center;
+    color: black;
+   // display: flex;
+    height: 45vh;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  .music-list {
+    margin: 30px;
+    box-shadow: 20px 20px 0px #222f3e;
+  }
+  
+  .details {
+    list-style: none;
+    background: #632ef5;
+    padding: 10px 0px;
+    margin: 0px;
+  }
+  
+  li {
+    padding-bottom: 4px;
+  }
+  
+  h2 {
+    background: #4319b6;
+    padding: 10px 0px;
+    margin: 0px;
+  }
+
+  body {
+    background-color: #576574;
+  }
+
+  .loading {
+    box-shadow: 20px 20px 0px pink !important;
+  }
+
+  @media screen and (min-width: 280px) and (max-width: 360px) {
+    .music-list {
+      margin: 8px;
+      width: 236px;
+    }
+  }
+
+  @media screen and (min-width: 360px) and (max-width: 650px) {
+    .music-list {
+      margin: 8px;
+      width: 301px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .wrapper {
+      height: 25vh;
+    }
+  }

@@ -1,43 +1,4 @@
 <div class="wrapper">
-  <div [class.loading]="(loading$ | async)" class="music-list" *ngIf="!(error$ | async); else error">
-    <div class="list" *ngIf="!musicList">
-      <h2>
-        Music List
-      </h2>
-
-        <ul *ngIf="(musicList$ | async); else noItems">
-          <li *ngFor="let music of musicList$ | async">
-            <span>{{ music.title }}</span>
-          </li>
-        </ul>
-
-      <ng-template #noItems>
-        <ul>
-          <li style="max-width:250px;margin:0 auto;">No items found. Are you sure there's <em>nothing</em> you want?</li>
-        </ul>
-      </ng-template>
-    </div>
-
-  </div>
-
-<div class="list" *ngIf="musicList">
-  <h2 [ngStyle]="{'background-color': header}">
-    Music List
-  </h2>
-
-    <ul *ngIf="musicList ; else noItems" [ngStyle]="{'background-color': bodyColor}">
-      <li *ngFor="let music of musicList">
-        <span>{{ music.title }}</span>
-      </li>
-    </ul>
-
-  <ng-template #noItems>
-    <ul>
-      <li style="max-width:250px;margin:0 auto;">No items found. Are you sure there's <em>nothing</em> you want?</li>
-    </ul>
-  </ng-template>
+<div class="container" *ngFor="let item of musicList">
+  <app-card [music]="item"></app-card>
 </div>
-
-<ng-template #error>
-  <h2>{{(error$ | async)?.message}}</h2>
-</ng-template>

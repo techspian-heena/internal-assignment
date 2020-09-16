@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  border-radius: 2px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+    .container {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 100%;
+      padding: 20px;
+      background-color: lightblue;
+
+      .error {
+          color: red;
+          font-size: 15px;
+      }
+    }
+    
+    input[type=text], input[type=password], textarea {
+      width: 100%;   
+      margin: 8px 0;  
+      padding: 12px 20px;   
+      display: inline-block;   
+      border: 2px solid blue;   
+      box-sizing: border-box;
+    }
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    .buttons {
+        display: flex;
+
+        button {
+          padding: 16px 20px;
+          margin: 8px 0; 
+          width: 100%;
+          opacity: 0.9;
+          cursor: pointer; 
+          font-size: 18px;
+        }
+
+        .button:hover {
+          opacity: 1;
+        }
+
+        .registerbtn {
+          background-color: #632ef5;
+          color: #ffff;
+          border: none; 
+          margin: 8px;          
+        }
+
+        .cancelbtn {
+          background-color: #ffff;
+          color: #632ef5;
+          border: 2px solid #632ef5;
+          margin: 8px;
+        }
+    }

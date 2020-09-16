@@ -4,19 +4,57 @@
       "id": 1,
       "title": "Emptyness",
       "category": "English",
-      "description": "ddd khd uhi dddj"
+      "description": "Gajendra Verma sound recordist from mumbai.."
     },
     {
       "id": 2,
-      "title": "I love my india",
+      "title": "Ye jo desh hai mera",
       "category": "Patriotic",
-      "description": "ddd khd uhi dddj"
+      "description": "Hindi indian music by A.R. Rahman"
     },
     {
-      "id": 3,
-      "title": "koi mil gya",
-      "category": "",
-      "description": ""
+      "title": "Everybody hurts",
+      "category": "Emotional",
+      "description": "Artist: R.E.M.\nAlbum: Automatic for the People\nReleased: 1992",
+      "id": 3
+    },
+    {
+      "title": "This is me",
+      "category": "Choral",
+      "description": "Artists: Keala Settle, The Greatest Showman Ensemble\nMovie: The Greatest Showman\nReleased: 2017",
+      "id": 4
+    },
+    {
+      "title": "yyy",
+      "category": "jjjjj",
+      "description": "yu uui",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "zaq1ZAQ!",
+      "firstName": "Heena",
+      "lastName": "Verma",
+      "email": "heena@techspian.com"
+    },
+    {
+      "id": 1,
+      "username": "heena",
+      "password": "xsw2!",
+      "firstName": "Heena",
+      "lastName": "Verma",
+      "email": "heena@techspian.com"
+    },
+    {
+      "username": "test",
+      "password": "1234",
+      "firstname": "testabc",
+      "lastname": "abc",
+      "email": "test@123",
+      "id": 2
     }
   ]
 }

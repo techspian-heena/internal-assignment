@@ -1,27 +1,28 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ThemeService } from 'src/app/services/theme.service';
 
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
-  let mockRouter = {
+  const mockRouter = {
     navigate: jasmine.createSpy('navigate')
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
+      declarations: [HeaderComponent],
       imports: [
         RouterTestingModule.withRoutes([])
       ],
       providers: [
-        { provide: Router, useValue: mockRouter}
+        { provide: Router, useValue: mockRouter }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -32,5 +33,15 @@ describe('HeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call login', () => {
+    component.logIn();
+    expect(mockRouter.navigate).toHaveBeenCalledWith(['./entry/login']);
+  });
+
+  it('should call signUp', () => {
+    component.signUp();
+    expect(mockRouter.navigate).toHaveBeenCalledWith(['./entry/sign-up']);
   });
 });

@@ -6,12 +6,12 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
-    declarations: [LoginComponent, SignUpComponent],
-    imports: [
-      CommonModule,
-      EntryRoutingModule,
-      ReactiveFormsModule,
-      FormsModule,
-    ]
-  })
-  export class EntryModule { }
+  declarations: [LoginComponent, SignUpComponent],
+  imports: [
+    CommonModule,
+    EntryRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ]
+})
+export class EntryModule { }
